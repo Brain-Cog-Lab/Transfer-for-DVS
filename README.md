@@ -8,7 +8,7 @@ which is a flexible plug-in module to enhance the optimization process of multim
 
 **Accepted by: The 38th Annual AAAI Conference on Artificial Intelligence**
 
-[arxivarxiv]()
+[arxiv]()
 
 
 ## Method
