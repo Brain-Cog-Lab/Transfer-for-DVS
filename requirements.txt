@@ -1,0 +1,15 @@
+numpy
+scipy
+h5py
+torch
+torchvision
+torchaudio
+timm
+scikit-learn
+einops
+thop
+pyyaml
+matplotlib
+seaborn
+pygame
+dv

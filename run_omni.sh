@@ -1,0 +1,7 @@
+python main_transfer.py --model Transfer_SCNN --node-type LIFNode --source-dataset omni --target-dataset nomni --step 12 --batch-size 16 --num-classes 1623 --act-fun BackEIGateGrad --epochs 50 --device 6 --log-interval 500 --smoothing 0.0 --lr 1.2 --sched step --decay-epochs 40 --opt adamw --warmup-epochs 5 --seed 42 --domain-loss --domain-loss-coefficient 0.5 --output /home/hexiang/DomainAdaptation_DVS/Results3/&
+
+
+python main_transfer.py --model Transfer_SCNN --node-type LIFNode --source-dataset omni --target-dataset nomni --step 12 --batch-size 16 --num-classes 1623 --act-fun BackEIGateGrad --epochs 50 --device 6 --log-interval 500 --smoothing 0.0 --lr 1.2 --sched step --decay-epochs 40 --opt adamw --warmup-epochs 5 --seed 1024 --domain-loss --domain-loss-coefficient 0.5 --output /home/hexiang/DomainAdaptation_DVS/Results3/& 
+
+
+python main_transfer.py --model Transfer_SCNN --node-type LIFNode --source-dataset omni --target-dataset nomni --step 12 --batch-size 16 --num-classes 1623 --act-fun BackEIGateGrad --epochs 50 --device 6 --log-interval 500 --smoothing 0.0 --lr 1.2 --sched step --decay-epochs 40 --opt adamw --warmup-epochs 5 --seed 90210 --domain-loss --domain-loss-coefficient 0.5 --output /home/hexiang/DomainAdaptation_DVS/Results3/&
