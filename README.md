@@ -15,18 +15,8 @@ Here is the PyTorch implementation of our paper.
 
 • While static images intuitively provide rich spatial information that may benefit event data, exploiting this knowledge remains a difficult problem. This is because that static and event data represent different modalities with domain mismatch.
 
-  <center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 0px 0px 0 rgba,0 0px 0px 0 rgba;" 
-    src="fig/Domainmismatch.png" width = "80%" alt=""/>
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 0px;">
-      Domain Mismatch
-  	</div>
-</center>
+<img src="fig\DomainMismatch.jpg" style="zoom: 50%;" />
+
 
 
 ## Method Introduction
@@ -45,18 +35,8 @@ Here is the PyTorch implementation of our paper.
 
    •**Result in a smoother and more stable learning process.**
 
-  <center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 0px 0px 0 rgba,0 0px 0px 0 rgba;" 
-    src="fig/ours_method.jpg" width = "80%" alt=""/>
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 0px;">
-      Our method
-  	</div>
-</center>
+<img src="fig\our_method.jpg" style="zoom: 67%;" />
+
 
 ## Usage
 
