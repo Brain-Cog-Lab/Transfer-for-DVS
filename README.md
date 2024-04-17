@@ -55,13 +55,14 @@ python main_transfer.py --model Transfer_VGG_SNN --node-type LIFNode --source-da
 ## Citation
 If our paper is useful for your research, please consider citing it:
 ```latex
-@misc{he2024efficient,
-      title={An Efficient Knowledge Transfer Strategy for Spiking Neural Networks from Static to Event Domain}, 
-      author={Xiang He and Dongcheng Zhao and Yang Li and Guobin Shen and Qingqun Kong and Yi Zeng},
-      year={2024},
-      eprint={2303.13077},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{he2024efficient,
+  title={An Efficient Knowledge Transfer Strategy for Spiking Neural Networks from Static to Event Domain},
+  author={He, Xiang and Zhao, Dongcheng and Li, Yang and Shen, Guobin and Kong, Qingqun and Zeng, Yi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={1},
+  pages={512--520},
+  year={2024}
 }
 ```
 
