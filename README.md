@@ -7,7 +7,7 @@ Here is the PyTorch implementation of our paper.
 
 **Accepted by: The 38th Annual AAAI Conference on Artificial Intelligence (AAAI 2024, Oral Presentation)**
 
-\[[arxiv](https://arxiv.org/abs/2303.13077)\] \[[code](https://github.com/Brain-Cog-Lab/Transfer-for-DVS)\]
+\[[arxiv](https://arxiv.org/abs/2303.13077)\] \[[paper](https://ojs.aaai.org/index.php/AAAI/article/view/27806)\] \[[code](https://github.com/Brain-Cog-Lab/Transfer-for-DVS)\]
 
 ## Why we need a transfer
 
@@ -50,7 +50,7 @@ As an example, the script for using our method on the N-Caltech101 dataset would
 python main_transfer.py --model Transfer_VGG_SNN --node-type LIFNode --source-dataset CALTECH101 --target-dataset NCALTECH101 --step 10 --batch-size 120 --act-fun QGateGrad --device 4 --seed 42 --num-classes 101 --traindata-ratio 1.0 --smoothing 0.0 --domain-loss --domain-loss-coefficient 0.5 --TET-loss --regularization
 ```
 
-
+For datasets [CEP-DVS](https://ieeexplore.ieee.org/document/9426390),  The corresponding read file is [rgb_hsv.py](./rgb_hsv.py), Please put it in the tonic environment at a location such as: `/home/anaconda3/envs/all_hx/lib/python3.8/site-packages/tonic/datasets/`.
 
 ## Citation
 If our paper is useful for your research, please consider citing it:
