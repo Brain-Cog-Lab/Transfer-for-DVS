@@ -38,6 +38,16 @@ Here is the PyTorch implementation of our paper.
 <img src="fig\our_method.jpg" style="zoom: 67%;" />
 
 
+## NCALTECH101 & CEP-DVS Datasets Prepare
+
+We provide download links to the NCALTECH101 and CEP-DVS datasets used in the paper, which you can find in the reply below this issue!
+[Ncaltech的使用](https://github.com/Brain-Cog-Lab/Transfer-for-DVS/issues/2#issuecomment-2266674665)
+
+We use the tonic library for event data reading. Specifically, we used version 0.0.1 of the tonic library, which is no longer available on the official website, and we uploaded the tonic libraries that the project depends on to a network drive.
+You can download it from [here](https://pan.baidu.com/s/1LCimoFgbfAweYu-uJ-WyUA), and the extraction code is 3x4r.
+
+Please put it in the tonic environment at a location such as: `/home/anaconda3/envs/all_hx/lib/python3.8/site-packages/tonic/`.
+
 ## Usage
 
 The well-trained model can be found at [here](https://huggingface.co/xianghe/transfer_for_dvs/tree/main).
@@ -50,7 +60,6 @@ As an example, the script for using our method on the N-Caltech101 dataset would
 python main_transfer.py --model Transfer_VGG_SNN --node-type LIFNode --source-dataset CALTECH101 --target-dataset NCALTECH101 --step 10 --batch-size 120 --act-fun QGateGrad --device 4 --seed 42 --num-classes 101 --traindata-ratio 1.0 --smoothing 0.0 --domain-loss --domain-loss-coefficient 0.5 --TET-loss --regularization
 ```
 
-For datasets [CEP-DVS](https://ieeexplore.ieee.org/document/9426390),  The corresponding read file is [rgb_hsv.py](./rgb_hsv.py), Please put it in the tonic environment at a location such as: `/home/anaconda3/envs/all_hx/lib/python3.8/site-packages/tonic/datasets/`.
 
 ## Citation
 If our paper is useful for your research, please consider citing it:
