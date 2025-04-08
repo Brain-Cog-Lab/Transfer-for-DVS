@@ -38,7 +38,7 @@ Here is the PyTorch implementation of our paper.
 <img src="fig\our_method.jpg" style="zoom: 67%;" />
 
 
-## NCALTECH101 & CEP-DVS Datasets Prepare
+## NCALTECH101 & CEP-DVS Datasets Preparation
 
 We provide download links to the NCALTECH101 and CEP-DVS datasets used in the paper, which you can find in the reply below this issue!
 [Ncaltech的使用](https://github.com/Brain-Cog-Lab/Transfer-for-DVS/issues/2#issuecomment-2266674665)
@@ -50,7 +50,21 @@ Please put it in the tonic environment at a location such as: `/home/anaconda3/e
 
 ## Usage
 
-The well-trained model can be found at [here](https://huggingface.co/xianghe/transfer_for_dvs/tree/main).
+#### Validation
+
+If you would like to verify the results in the paper, The well-trained model can be found at [here](https://huggingface.co/xianghe/transfer_for_dvs/tree/main).
+
+As an example, you could run the following code and get 92.64% accuracy on Ncaltech101.
+
+```
+python main_transfer.py --model Transfer_VGG_SNN --node-type LIFNode --source-dataset CALTECH101 --target-dataset NCALTECH101 --step 10 --batch-size 120 --act-fun QGateGrad --device 4 --seed 42 --num-classes 101 --traindata-ratio 1.0 --smoothing 0.0 --domain-loss --domain-loss-coefficient 0.5 --TET-loss --regularization --eval_checkpoint /home/hexiang/DomainAdaptation_DVS/Results2/train_DomainAdaptation/Transfer_VGG_SNN-NCALTECH101-10-bs_120-seed_42-DA_False-ls_0.0-domainLoss_True_coefficient0.5-traindataratio_1.0-rgbdataratio_1.0-TET_loss_True-hsv_True-sl_True-regularization_True/model_best.pth.tar --eval
+```
+
+<img src="fig\validation_results.jpg" style="zoom: 90%;" />
+
+
+#### Training
+
 
 If you want to retrain yourself to verify the results in the paper, please refer to the commands in scripts [run_aba.sh](./run_aba.sh) and [run_omni.sh](./run_omni.sh). 
 
@@ -60,8 +74,18 @@ As an example, the script for using our method on the N-Caltech101 dataset would
 python main_transfer.py --model Transfer_VGG_SNN --node-type LIFNode --source-dataset CALTECH101 --target-dataset NCALTECH101 --step 10 --batch-size 120 --act-fun QGateGrad --device 4 --seed 42 --num-classes 101 --traindata-ratio 1.0 --smoothing 0.0 --domain-loss --domain-loss-coefficient 0.5 --TET-loss --regularization
 ```
 
+With step=10, batch_size=120, on a single 40G A100 GPU, it takes `38000MB` of gpu memory. running time is about `4.5` hours for 300 epochs. 
+
+You can adjust the batch size yourself. This will not affect performance and may even give better results.
+
+
+#### More discussion
+In this paper, we only validate the results on SNNs, and we believe that this approach is not limited by the network structure, i.e., the proposed efficient knowledge migration method should simultaneously contribute to the performance of the ANN model.
+
+
 
 ## Citation
+
 If our paper is useful for your research, please consider citing it:
 ```latex
 @inproceedings{he2024efficient,
