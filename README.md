@@ -79,6 +79,14 @@ With step=10, batch_size=120, on a single 40G A100 GPU, it takes `38000MB` of gp
 You can adjust the batch size yourself. This will not affect performance and may even give better results.
 
 
+#### Loss landscape Visualization
+
+An example of a script to visualize a loss landscape plot is:
+
+```shell
+python main_visual_losslandscape.py --model resnet18 --node-type LIFNode --source-dataset RGBCEPDVS --target-dataset CEPDVS --step 6 --batch-size 512 --eval --eval_checkpoint /home/hexiang/DomainAdaptation_DVS/Results2/train_DomainAdaptation/Transfer_ResNet18-CEPDVS-6-bs_120-seed_42-DA_True-ls_0.0-domainLoss_True_coefficient0.5-traindataratio_1.0-rgbdataratio_1.0-TET_loss_True-hsv_True-sl_True-regularization_True/model_best.pth.tar --x=-1.0:1.0:51 --y=-1.0:1.0:51 --dir_type weights --xnorm filter --xignore biasbn --ynorm filter --yignore biasbn --plot --DVS-DA --smoothing 0.0 --output /home/hexiang/DomainAdaptation_DVS/Results2/ --train-portion 0.5 --num-classes 20
+```
+
 #### More discussion
 In this paper, we only validate the results on SNNs, and we believe that this approach is not limited by the network structure, i.e., the proposed efficient knowledge migration method should simultaneously contribute to the performance of the ANN model.
 
